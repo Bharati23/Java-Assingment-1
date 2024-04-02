@@ -1,0 +1,307 @@
+LabAssignments1-OOP swith Java
+Bharati Balasaheb Wakchaure
+
+1. Write Java Programs to print the following patterns
+a. (For value of N is given as 5)
+Program-
+//Print pattern 
+package LabProgram;
+import java.util.Scanner;
+public class Pattern1 
+{
+	public static void main(String[] args) 
+	{
+		int i=1;
+		for (int r=1;r<5;r++)
+		{
+		for(i=1;i<=5;i++)
+		{
+			System.out.print("*");
+		}
+		System.out.println();
+		}
+	
+	
+	}
+}
+
+
+b. (For value of N is given as 5)
+package day3array;
+import java.util.Scanner;
+public class StarSqaure1 {
+	public static void main (String args[]) {
+	for(int r=1;r<=4;r++)
+	{
+		for (int c=1;c<=4;c++)
+		{
+			if(r==1 || r==4 || c==1 || c==4)
+			{
+				System.out.print("*");
+			}
+			else
+			{
+			System.out.print(" ");
+			}
+		
+		}
+		System.out.println();
+	}
+	
+	}
+}
+
+
+c. 	(For value of N is given as 6)
+program-
+
+package LabProgram;
+import java.util.Scanner;
+public class Pattern3triangle {
+			public static void main(String[] args) 
+			{
+				int i,j;
+				for (i=1;i<=5;i++)
+				{
+				for(j=1;j<=i;j++)
+				{
+					System.out.print(" * ");
+				}
+				System.out.println();
+				}
+		}
+
+	
+
+}
+
+
+d. (For value of N is given as 6)
+
+Program-
+package LabProgram;
+import java.util.Scanner;
+public class Pattern3 {
+	public static void main(String[] args) 
+	{
+		int row=5, star=5, space=0;
+		for (int r=1;r<=row;r++)
+		{
+		for(int i=1;i<=space;i++)
+		{
+			System.out.print(" ");
+		}
+		for(int j=1;j<=star;j++)
+		{
+			System.out.print("*");
+		}
+		System.out.println();
+		space++;
+		star--;
+		}
+	}
+}
+
+
+
+
+
+
+
+e. (For value of N is given as 6)
+Program-
+package LabProgram;
+import java.util.Scanner;
+public class pattern5 {
+	public static void main(String[] args) 
+	{
+		int row=5, star=1, space=4;
+		for (int r=1;r<=row;r++)
+		{
+		for(int i=1;i<=space;i++)
+		{
+			System.out.print(" ");
+		}
+		for(int j=1;j<=star;j++)
+		{
+			System.out.print("* ");
+		}
+		System.out.println();
+		space--;
+		star++;
+		}
+	}
+}
+
+
+
+f. (For value of N is given as 6)
+Program-
+package LabProgram;
+import java.util.Scanner;
+public class Triangle {
+	public static void main(String[] args) 
+	{
+		int row=5, star=5, space=0;
+		for (int r=1;r<=row;r++)
+		{
+		for(int i=1;i<=space;i++)
+		{
+			System.out.print(" ");
+		}
+		for(int j=1;j<=star;j++)
+		{
+			System.out.print(" * ");
+		}
+		System.out.println();
+		space++;
+		star--;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+g. (For value of N is given as 6)
+Program-
+package day3array;
+import java.util.Scanner;
+public class Triangle2 {
+	public static void main (String args[]) 
+	{
+		int px=5;
+		int py=5;
+		int row=5;
+		for(int r=1;r<=5;r++)// outer for loop
+		{
+			for(int i=1;i<=5;i++)
+			{
+			for(int j=1;j<=9;j++)
+			{
+				if(i==row||j==px||j==py)
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			px--;
+			py++;
+			System.out.println();
+			}
+		}
+	}
+}
+
+
+
+
+
+h. (For value of N is given as 5)
+
+
+2. Find the Maximum Element and Average of Elements in an Array.
+Program-
+package dac ;
+public class MaxAvgArray {
+	public static void main(String[] args)
+ 	{
+	 int array[]= {1,2,3,5,6,8,9,7,10};
+	 int avrage,max=0,sum=0;
+	 for (int i = 0; i< array.length; i++) 
+	 {
+		 for (int j = 1; j < array.length; j++) 
+		 {
+			 sum=sum+array[i];
+			 if(array[i]>array[j])
+				 max=array[i];
+		 }
+	 }
+	 System.out.println("Maximun Element= "+max);
+	 avrage= sum/9;
+	 System.out.println("Average of Elements in an Array :"+avrage);
+}
+}
+
+3. Reverse a given Array and print.
+Program-
+package day4lab;
+import java.util.Scanner;
+public class Lab1ArrayReverse {
+
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5,6};
+		int start=0;
+		int end=0;
+		int temp=0;
+		while (start<end)
+		{
+			arr[start]=arr[start]+arr[end];
+			arr[end]=arr[start]-arr[end];
+			arr[start]=arr[start]-arr[end];
+			start++;
+			end--;
+		}
+		for(int i=0;i<6;i++)
+		{
+			System.out.print(arr[i]);
+		}
+		
+			
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+4. Find the second maximum and second minimum Elements of an array.
+Program-
+package day4lab;
+
+public class Lab3SecondMaxMin {
+	public static void main(String[] args) {
+		int arr[]= {4,5,2,7,6,5};
+		int i;
+		for(i=5;i>=0;i--);
+		{int temp=0;
+			for(int j=i-1;j>=0;j--)
+			{
+				if(arr[j]>arr[i])
+			{
+				 temp=arr[j];
+				arr[j]=arr[i];
+				arr[i]=temp;
+			}
+		}
+		}
+	}
+}
+
+
+5. Count the number of occurrence of each element of an array.
+Program-
+package dac;
+public class OccuranceElement {
+	public static void main(String[] args) {
+        int a[] = {22,55,11,11,22,55,88,44,33,33,33,22,11};
+		for (int i = 0; i < a.length; i++) 
+		{    int count=0;
+			for (int j = 0; j < a.length; j++) 
+			{
+				if(a[i]==a[j])
+					count++;
+			}
+			System.out.println("number of = " +a[i]+ "  occurrence  " +count+ "   in array");
+		}
+	}
+
+}
